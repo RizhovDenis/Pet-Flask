@@ -1,0 +1,27 @@
+<!-- DOCUMENT START -->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Humanity</title>
+    {% endif %}
+    <link rel="icon" type="image/x-icon" href="static/img/proj_favicon.png">
+    <style>
+        {% include "pages/styles.css" %}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {% include 'pages/^shared/header/index.html' %}
+        {% block content %}{% endblock %}
+        {% include 'pages/^shared/footer/index.html' %}
+    </div>
+    <script>
+    	{% include 'pages/scripts.js' %}
+    </script>
+</body>
+<!-- DOCUMENT END -->

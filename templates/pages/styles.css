@@ -1,0 +1,16 @@
+{% include 'pages/^core/style.css' %}
+
+{% include 'pages/^shared/header/style.css' %}
+{% include 'pages/^shared/footer/style.css' %}
+
+{% include 'pages/^elements/pagination/style.css' %}
+{% include 'pages/^elements/user_header/style.css' %}
+{% include 'pages/^elements/upload_avatar/style.css' %}
+
+{% include 'pages/auth/style.css' %}
+{% include 'pages/sign_up/style.css' %}
+{% include 'pages/error/style.css' %}
+{% include 'pages/homepage/style.css' %}
+{% include 'pages/homepage/write_post/style.css' %}
+{% include 'pages/homepage/feed/style.css' %}
+{% include 'pages/homepage/following/style.css' %}

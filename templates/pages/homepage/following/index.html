@@ -1,0 +1,14 @@
+{% extends 'pages/^core/base.html' %}
+
+{% block content %}
+<!-- CONTENT START -->
+<main class="homepage">
+    {% include 'pages/^elements/user_header/index.html' %}
+    {% if subscriptions %}
+    {% include 'pages/^elements/subscriptions/index.html' %}
+    {% else %}
+    <section class="container__subscribe">You follow nobody</section>
+    {% endif %}
+</main>
+<!-- CONTENT END -->
+{% endblock %}

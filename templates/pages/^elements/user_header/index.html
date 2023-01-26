@@ -1,0 +1,32 @@
+<!-- START USER HEADER -->
+<section class="user-header">
+    {% if another_user %}
+    <h1 class="page-title">{{ another_user.name }} {{ another_user.surname }}</h1>
+    {% if another_user.avatar %}
+    <img class="avatar" src="/static/uploads/{{ another_user.avatar }}" alt="" />
+    {% else %}
+    <img class="avatar" src="/static/img/default_avatar.png" alt="" />
+    {% endif %}
+    {% else %}
+    <h1 class="page-title">{{ user.name }} {{ user.surname }}</h1>
+    <a href="#upload-avatar">
+        {% if user.avatar %}
+        <img class="avatar" src="/static/uploads/{{ user.avatar }}" alt="" />
+        {% else %}
+        <img class="avatar" src="/static/img/default_avatar.png" alt="" />
+        {% endif %}
+    </a>
+
+    {% endif %}
+
+    {% if another_user %}
+    <form action="" method="post">
+        {% if not subscribe %}
+        <button class="form-btn-subscribe" name="subscription" value="Subscribe">Subscribe</button>
+        {% else %}
+        <button class="form-btn-subscribe" name="subscription" value="Unsubscribe">Unsubscribe</button>
+        {% endif %}
+    </form>
+    {% endif %}
+</section>
+<!-- END USER HEADER -->

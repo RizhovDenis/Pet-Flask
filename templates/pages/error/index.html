@@ -1,0 +1,11 @@
+{% extends 'pages/^core/base.html' %}
+{% block content %}
+<!-- CONTENT START -->
+<main class="error-page">
+    <section class="error-message">
+        the page is not available
+    </section>
+    <a class="form-btn" href="{{url_for('login-page')}}">Log In</a>
+</main>
+<!-- CONTENT END -->
+{% endblock %}

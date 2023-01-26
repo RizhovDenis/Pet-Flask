@@ -1,0 +1,7 @@
+alembic==1.8.1
+flask==2.2.2
+flask-admin==1.6.0
+SQLAlchemy==1.4.40
+psycopg2==2.9.3
+redis==4.3.4
+celery==5.2.7

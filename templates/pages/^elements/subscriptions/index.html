@@ -1,0 +1,7 @@
+<!-- SUBSCRIPTIONS LIST START -->
+<section class="container__subscribe">
+    {% for sub in subscriptions %}
+    <a class="person" href="{{url_for('user-page', user_url=sub.url)}}">{{sub.name}} {{sub.surname}}</a>
+    {% endfor %}
+</section>
+<!-- SUBSCRIPTIONS LIST END -->

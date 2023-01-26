@@ -1,0 +1,10 @@
+<!-- NAVIGATION PANEL START -->
+<nav class="homepage-nav">
+    <a class="homepage-nav-btn" href="{{url_for('user-page', user_url=user.url)}}">My Posts</a>
+    <a class="homepage-nav-btn" href="{{url_for('feed-page', page=1)}}">Posts</a>
+    <a class="homepage-nav-btn" href="{{url_for('followers-page')}}">Followers</a>
+    <a class="homepage-nav-btn" href="{{url_for('following-page')}}">Following</a>
+    <a class="homepage-nav-btn" href="{{url_for('post-page')}}">Write Post</a>
+    <a class="homepage-nav-btn" href="{{url_for('logout-page')}}">Log out</a>
+</nav>
+<!-- NAVIGATION PANEL END -->

@@ -1,0 +1,28 @@
+{% extends 'pages/^core/base.html' %}
+
+{% block content %}
+<!-- CONTENT START -->
+<main class="homepage">
+    {% include 'pages/^elements/user_header/index.html' %}
+    <section>
+        <h1>What is news?</h1>
+        <form class="form-post" action="{{url_for('post-page')}}" method="post">
+            <div class="form-control">
+                <input class="input-area" type="text" name="post_title" placeholder="War and peace" required />
+            </div>
+            <div class="form-control">
+                <textarea name="post_message" rows="7" cols="40"></textarea>
+            </div>
+            <div class="form-control">
+                <label>Public</label><input type="radio" name="post_status" value="public" checked>
+                <label>Anonymous</label><input type="radio" name="post_status" value="anon">
+            </div>
+            <div class="form-control">
+                <button class="form-btn" value="Post" type="submit">Publish post</button>
+            </div>
+        </form>
+    </section>
+
+</main>
+<!-- CONTENT END -->
+{% endblock %}

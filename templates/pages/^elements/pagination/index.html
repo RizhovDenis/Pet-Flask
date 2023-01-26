@@ -1,0 +1,104 @@
+<!-- PAGINATION START -->
+{% if pagination_meta %}
+<section class="container-pagination">
+        {% if text %}
+        <ul class="pagination">
+                {% if pagination_meta[1] != 1 %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] - 1)}}?text={{text}}">&lsaquo;
+                                Previous</a></li>
+                {% endif %}
+                {% if pagination_meta[0] - pagination_meta[1] > 2 %}
+                <li class="pagination-item"><a class="page-number current-page"
+                                href="{{url_for('feed-page', page=pagination_meta[1])}}?text={{text}}">{{
+                                pagination_meta[1]
+                                }}</a></li>
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] + 1)}}?text={{text}}">{{
+                                pagination_meta[1] + 1
+                                }}</a></li>
+                <li class="pagination-item page-number">...</li>
+                {% elif pagination_meta[0] - pagination_meta[1] == 2 %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] - 1)}}?text={{text}}">{{
+                                pagination_meta[1] - 1
+                                }}</a></li>
+                <li class="pagination-item"><a class="page-number current-page"
+                                href="{{url_for('feed-page', page=pagination_meta[1])}}?text={{text}}">{{
+                                pagination_meta[1] }}</a>
+                </li>
+                <li class="pagination-item page-number">...</li>
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[0] - 1)}}?text={{text}}">{{
+                                pagination_meta[0] - 1
+                                }}</a></li>
+                {% else %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=1)}}?text={{text}}">1</a></li>
+                <li class="pagination-item page-number">...</li>
+                <li class="pagination-item"><a class="page-number current-page"
+                                href="{{url_for('feed-page', page=pagination_meta[1])}}?text={{text}}">{{
+                                pagination_meta[1] }}</a>
+                </li>
+                {% endif %}
+                {% if pagination_meta[0] > pagination_meta[1] %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[0])}}?text={{text}}">{{
+                                pagination_meta[0] }}</a></li>
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] + 1)}}?text={{text}}">Next
+                                &rsaquo;</a></li>
+                {% endif %}
+        </ul>
+        {% else %}
+        <ul class="pagination">
+                {% if pagination_meta[1] != 1 %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] - 1)}}">&lsaquo;
+                                Previous</a></li>
+                {% endif %}
+                {% if pagination_meta[0] - pagination_meta[1] > 2 %}
+                <li class="pagination-item"><a class="page-number current-page"
+                                href="{{url_for('feed-page', page=pagination_meta[1])}}">{{
+                                pagination_meta[1]
+                                }}</a></li>
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] + 1)}}">{{
+                                pagination_meta[1] + 1
+                                }}</a></li>
+                <li class="pagination-item page-number">...</li>
+                {% elif pagination_meta[0] - pagination_meta[1] == 2 %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] - 1)}}">{{
+                                pagination_meta[1] - 1
+                                }}</a></li>
+                <li class="pagination-item"><a class="page-number current-page"
+                                href="{{url_for('feed-page', page=pagination_meta[1])}}">{{
+                                pagination_meta[1] }}</a>
+                </li>
+                <li class="pagination-item page-number">...</li>
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[0] - 1)}}">{{
+                                pagination_meta[0] - 1
+                                }}</a></li>
+                {% else %}
+                <li class="pagination-item"><a class="page-number" href="{{url_for('feed-page', page=1)}}">1</a></li>
+                <li class="pagination-item page-number">...</li>
+                <li class="pagination-item"><a class="page-number current-page"
+                                href="{{url_for('feed-page', page=pagination_meta[1])}}">{{
+                                pagination_meta[1] }}</a>
+                </li>
+                {% endif %}
+                {% if pagination_meta[0] > pagination_meta[1] %}
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[0])}}">{{
+                                pagination_meta[0] }}</a></li>
+                <li class="pagination-item"><a class="page-number"
+                                href="{{url_for('feed-page', page=pagination_meta[1] + 1)}}">Next
+                                &rsaquo;</a></li>
+                {% endif %}
+        </ul>
+        {% endif %}
+</section>
+{% endif %}
+<!-- PAGINATION END -->

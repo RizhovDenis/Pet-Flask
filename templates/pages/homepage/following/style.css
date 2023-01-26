@@ -1,0 +1,18 @@
+.container__subscribe {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 600px;
+
+    margin-top: 50px;
+}
+
+.container__subscribe .person {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: large;
+    font-weight: 600;
+
+    margin: 0 0 30px 0;
+}

@@ -1,0 +1,60 @@
+.registr {
+    width: 100%;
+    height: auto;
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registr .form-registr {
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.registr .form-registr .form-control .input-area {
+    width: var(--box-width);
+    height: var(--box-height);
+    margin: 15px;
+    padding-left: 20px;
+
+    border: 2px solid var(--color-border);
+    border-radius: 15px;
+}
+
+.form-btn {
+    width: var(--box-width);
+    height: var(--box-height);
+    margin: 15px;
+
+    border-radius: 15px;
+    border: 2px solid var(--color-btn);
+    background-color: var(--color-btn);
+
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.form-btn:hover {
+    transition: 0.5s;
+    opacity: 0.3;
+}
+
+.registr .page-title {
+    text-transform: uppercase;
+    margin: var(--margin);
+}

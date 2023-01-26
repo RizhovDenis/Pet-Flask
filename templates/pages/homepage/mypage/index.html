@@ -1,0 +1,28 @@
+{% extends 'pages/^core/base.html' %}
+
+{% block content %}
+<!-- CONTENT START -->
+<main class="homepage">
+    {% include 'pages/^elements/upload_avatar/index.html' %}
+    {% include 'pages/^elements/user_header/index.html' %}
+    <section class="container-posts">
+        {% if posts %}
+        {% for post in posts %}
+        <article class="wrapper-article">
+            <h2 class="article-title">{{ post.title }}</h2>
+            <p class="article-post">{{ post.post }}</p>
+            <div class="article-status">
+                {% if session.get('user_url') == user_url %}
+                <div>Status: {{ post.status }}</div>
+                {% endif %}
+                <div>{{post.created_at.strftime('%H:%M - %d %b %Y')}}</div>
+            </div>
+        </article>
+        {% endfor %}
+        {% else %}
+        <div>There are not posts yet</div>
+        {% endif %}
+    </section>
+</main>
+<!-- CONTENT END -->
+{% endblock %}

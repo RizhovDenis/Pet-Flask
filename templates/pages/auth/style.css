@@ -1,0 +1,59 @@
+.auth {
+    width: 100%;
+    height: auto;
+    flex: 1 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth .form-auth {
+    margin-top: var(--margin);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.auth .form-auth .form-control .input-area {
+    width: var(--box-width);
+    height: var(--box-height);
+    margin: 15px;
+    padding-left: 20px;
+
+    border: 2px solid var(--color-border);
+    border-radius: 15px;
+}
+
+.auth .form-auth .form-control .form-btn {
+    width: var(--box-width);
+    height: var(--box-height);
+    margin: 15px;
+
+    border-radius: 15px;
+    border: 2px solid var(--color-btn);
+    background-color: var(--color-btn);
+
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.auth .page-title {
+    text-transform: uppercase;
+    margin: var(--margin);
+}
+
+.auth .preview {
+    width: var(--box-width);
+    height: auto;
+    margin: 15px;
+
+    text-align: center;
+
+    font-size: 18px;
+}

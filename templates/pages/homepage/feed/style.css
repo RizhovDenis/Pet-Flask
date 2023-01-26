@@ -1,0 +1,46 @@
+.homepage {}
+
+.homepage .search {
+    position: relative;
+}
+
+.homepage .search .form {
+    position: relative;
+}
+
+.homepage .search .form .form-search {
+    position: relative;
+    width: var(--box-width);
+    height: 50px;
+    margin: 20px 0;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    font-size: large;
+}
+
+.homepage .search .form .form-search-btn {
+    border: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 16px;
+    background: none;
+    cursor: pointer;
+}
+
+.main-admin .search .btn-search {
+    width: 52px;
+    height: 52px;
+    margin-left: 20px;
+    border: none;
+    background: var(--color-white);
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--box-radius);
+    cursor: pointer;
+}

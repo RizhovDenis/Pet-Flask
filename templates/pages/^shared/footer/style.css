@@ -1,0 +1,23 @@
+footer {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    flex: 0 0 auto;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav .footer-nav {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-text);
+    margin: 0 var(--margin);
+
+    font-size: large;
+    font-weight: 600;
+}

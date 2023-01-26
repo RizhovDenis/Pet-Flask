@@ -1,0 +1,32 @@
+.container-pagination {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: inline;
+    padding: 20px 0;
+    background-color: var(--color-post);
+    border-top: 2px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.pagination-item {
+    display: inline;
+    padding: 20px;
+    border-right: 2px solid var(--color-border);
+    border-left: 2px solid var(--color-border);
+}
+
+.page-number {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: medium;
+}
+
+.current-page {
+    font-size: large;
+    border-bottom: 2px solid var(--color-text);
+}

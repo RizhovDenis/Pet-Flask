@@ -1,0 +1,33 @@
+{% extends 'pages/^core/base.html' %}
+
+{% block content %}
+<!-- CONTENT START -->
+<main class="homepage">
+    {% include 'pages/^elements/user_header/index.html' %}
+    <section class="container-posts">
+        {% if posts %}
+        {% include 'pages/^elements/search_line/index.html' %}
+        {% for post in posts %}
+
+        <article class="wrapper-article">
+            <h2 class="article-title">{{ post.title }}</h2>
+            <p class="article-post">{{ post.post }}</p>
+            <div class="article-status">
+                {% if post.status == 'anon' %}
+                <a class="article-author">Incognito</a>
+                {% else %}
+                <a href="{{url_for('user-page', user_url=post.url)}}" class="article-author">{{post.name + " " +
+                    post.surname}}</a>
+                {% endif %}
+                <div>{{post.created_at.strftime('%H:%M - %d %b %Y')}}</div>
+            </div>
+        </article>
+        {% endfor %}
+        {% else %}
+        <div>There are not posts yet</div>
+        {% endif %}
+        {% include 'pages/^elements/pagination/index.html' %}
+    </section>
+</main>
+<!-- CONTENT END -->
+{% endblock %}

@@ -1,0 +1,16 @@
+<!-- SEARCH LINE START -->
+<div class="search">
+    <form class="form" action="" method="post">
+        {% if text %}
+        <input type="text" class="form-search" name="text-matches" value="{{ text }}"
+            placeholder="Search interest topics" required>
+        {% else %}
+        <input type="text" class="form-search" name="text-matches" value="" placeholder="Search interest topics"
+            required>
+        {% endif %}
+        <button type="sumbit" class="form-search-btn" name="search" value="on">
+            <img class="btn-search" src="/static/img/magnifying-glass.png" alt="search" srcset="">
+        </button>
+    </form>
+</div>
+<!-- SEARCH LINE END -->

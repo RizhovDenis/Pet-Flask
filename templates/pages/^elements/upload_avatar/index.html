@@ -1,0 +1,15 @@
+<!-- START MODAL WINDOW -->
+{% if not another_user %}
+<section id="upload-avatar" class="modal-upload-avatar">
+    <header>
+        <a href="#close" class="close">×</a>
+        <h3 class="modal-title">Change your photo</h3>
+    </header>
+    <form class="form-upload-avatar" enctype="multipart/form-data" method="post" action="{{ request.url }}">
+        <label for="avatar">Choose images to upload (PNG, JPG)</label>
+        <input id="avatar" name="avatar" type="file">
+        <button class="form-btn-upload-avatar" name="upload-avatar" value="on">Upload</button>
+    </form>
+</section>
+{% endif %}
+<!-- END MODAL WINDOW -->

@@ -1,0 +1,31 @@
+{% extends 'pages/^core/base.html' %}
+
+{% block content %}
+<!-- CONTENT START -->
+<main class="registr">
+    <h1 class="page-title">Registration</h1>
+    <form class="form-registr" action="{{url_for('registration-page')}}" method="post">
+        <div class="form-control">
+            <input class="input-area" type="email" name="mail" placeholder="example@humanity.com" required />
+        </div>
+        <div class="form-control">
+            <input class="input-area" type="password" name="password" placeholder="Password" required />
+        </div>
+        <div class="form-control">
+            <input class="input-area" type="text" name="name" placeholder="Ivan" required />
+        </div>
+        <div class="form-control">
+            <input class="input-area" type="text" name="surname" placeholder="Ivanov" required />
+        </div>
+        <div class="form-control">
+            <input class="input-area" type="datetime" name="birthday" placeholder="15.05.1992" required />
+        </div>
+        <div class="form-control">
+            <button class="form-btn" name="sign-up" value="on" type="submit">Sign Up</button>
+        </div>
+    </form>
+    <h2 class="sub-title">Do you have account?</h2>
+    <a href="{{url_for('login-page')}}" class="form-btn" name="log-in" value="on" type="submit">Log In</a>
+</main>
+<!-- CONTENT END -->
+{% endblock %}

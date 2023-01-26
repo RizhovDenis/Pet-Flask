@@ -1,0 +1,27 @@
+{% extends 'pages/^core/base.html' %}
+
+{% block content %}
+<!-- CONTENT START -->
+<main class="auth">
+    <h1 class="page-title">Authorization</h1>
+    <form class="form-auth" action="{{url_for('login-page')}}" method="post">
+        <div class="form-control">
+            <input class="input-area" type="email" name="mail" placeholder="example@humanity.com" required />
+        </div>
+        <div class="form-control">
+            <input class="input-area" type="password" name="password" placeholder="Password" required />
+        </div>
+        <div class="form-control">
+            <button class="form-btn" name="log-in" value="on" type="submit">Log In</button>
+        </div>
+    </form>
+    <section class="auth">
+        <a href="{{url_for('registration-page')}}" class="form-btn" name="sign-up" value="on" type="submit">
+            Sign Up</a>
+        <article class="preview">
+            After signing up you'll get access to all Humanity posts
+        </article>
+    </section>
+</main>
+<!-- CONTENT END -->
+{% endblock %}
